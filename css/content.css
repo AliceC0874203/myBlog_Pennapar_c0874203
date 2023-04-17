@@ -78,3 +78,44 @@ input[type=submit]:hover {
     background-color: #f2f2f2;
     padding: 20px;
 }
+
+/* media screen */
+
+@media (max-width: 767px) {
+    body {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    main {
+        display: block;
+    }
+
+    aside {
+        width: 100%;
+        padding-right: 0;
+    }
+
+    section {
+        display: block;
+    }
+
+    .two-column {
+        width: 100%;
+    }
+
+    .two-column td {
+        display: block;
+        width: 100%;
+        padding: 10px 0;
+    }
+
+    img {
+        width: 100%;
+        height: auto;
+    }
+
+    nav a {
+        display: block;
+    }
+}

@@ -36,3 +36,24 @@ aside {
     margin-top: 4rem;
     width: 200px;
 }
+
+/* media screen */
+
+@media (max-width: 767px) {
+    body {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    main {
+        display: block;
+    }
+
+    .main-column, .aside {
+        width: 100%;
+    }
+
+    nav a {
+        display: block;
+    }
+}
