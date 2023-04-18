@@ -8,8 +8,6 @@ aside {
     padding-right: 10px;
 }
 
-
-
 figure {
     float: left;
     margin: 0 10px 10px 0;
@@ -46,6 +44,11 @@ section {
     display: inline-block;
 }
 
+
+/* ------------------------------
+form 
+---------------------------------   */
+
 input[type=text],
 input[type=email],
 select,
@@ -79,7 +82,100 @@ input[type=submit]:hover {
     padding: 20px;
 }
 
-/* media screen */
+/* ------------------------------
+image rollover
+---------------------------------   */
+
+.image-rollover {
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+    background-repeat: no-repeat;
+}
+
+.image-rollover img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.rollover-text {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 5px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    font-size: 14px;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.image-rollover:hover .rollover-text {
+    opacity: 1;
+}
+
+.image-rollover:hover img {
+    opacity: 0.3;
+}
+
+/* ------------------------------
+/* slideshow
+---------------------------------   */
+
+.slideshow-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.slideshow-container {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+}
+
+.slide {
+    display: none;
+    width: 100%;
+    position: relative;
+    animation: fade 1.5s;
+}
+
+.slide img {
+    width: 100%;
+}
+
+.dot-container {
+    text-align: center;
+    padding: 10px;
+}
+
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+    background-color: #717171;
+}
+
+@keyframes fade {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+/* ------------------------------
+/* media screen 
+---------------------------------   */
 
 @media (max-width: 767px) {
     body {
