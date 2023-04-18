@@ -21,36 +21,36 @@
     <h1>💻 Alice's Personal Blog 💻</h1>
     <nav>
       <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About Me</a></li>
-        <li><a href="contact.html">Contact</a></li>
+        <li><a href="index.html" title="This leads you to index page.">Home</a></li>
+        <li><a href="about.html" title="This leads you to about page.">About Me</a></li>
+        <li><a href="contact.html" title="This leads you to contact page.">Contact</a></li>
       </ul>
     </nav>
   </header>
 
   <div class="slideshow-wrapper">
     <div class="slideshow-container">
-        <div class="slide">
-            <img src="images/img_nature_wide.jpg" alt="Image 1">
-        </div>
-        <div class="slide">
-            <img src="images/img_snow_wide.jpg" alt="Image 2">
-        </div>
-        <div class="slide">
-            <img src="images/img_lights_wide.jpg" alt="Image 3">
-        </div>
+      <div class="slide">
+        <img src="images/img_nature_wide.jpg" alt="Image 1" title="nature">
+      </div>
+      <div class="slide">
+        <img src="images/img_snow_wide.jpg" alt="Image 2" title="snow">
+      </div>
+      <div class="slide">
+        <img src="images/img_lights_wide.jpg" alt="Image 3" title="lights">
+      </div>
     </div>
     <div class="dot-container">
-        <span class="dot" onclick="currentSlide(1)"></span>
-        <span class="dot" onclick="currentSlide(2)"></span>
-        <span class="dot" onclick="currentSlide(3)"></span>
+      <span class="dot" onclick="currentSlide(1)"></span>
+      <span class="dot" onclick="currentSlide(2)"></span>
+      <span class="dot" onclick="currentSlide(3)"></span>
     </div>
-</div>
+  </div>
 
   <main>
     <aside>
       <h3>Contact Me At</h3>
-      <p><a href="mailto:aice.spwt@gmail.com"> 🙌🏻 Email</a></p>
+      <p><a href="mailto:aice.spwt@gmail.com" title="Alice.spwt@gmail.com"> 🙌🏻 Email</a></p>
       <p><a href="https://www.linkedin.com/in/pensp/" target="_blank"> 👍🏻 LinkedIn</a></p>
       <p><a href="https://github.com/AliceC0874203" target="_blank"> 👉🏻 GitHub</a></p>
     </aside>
@@ -85,33 +85,33 @@
 
   <script>
     let slideIndex = 0;
-        const slides = document.querySelectorAll(".slide");
-        const dots = document.querySelectorAll(".dot");
+    const slides = document.querySelectorAll(".slide");
+    const dots = document.querySelectorAll(".dot");
 
-        function showSlides() {
-            for (let i = 0; i < slides.length; i++) {
-                slides[i].style.display = "none";
-            }
-            slideIndex++;
-            if (slideIndex > slides.length) {
-                slideIndex = 1;
-            }
-            for (let i = 0; i < dots.length; i++) {
-                dots[i].classList.remove("active");
-            }
-            slides[slideIndex - 1].style.display = "block";
-            dots[slideIndex - 1].classList.add("active");
-            setTimeout(showSlides, 3000); // Change image every 3 seconds
-        }
+    function showSlides() {
+      for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) {
+        slideIndex = 1;
+      }
+      for (let i = 0; i < dots.length; i++) {
+        dots[i].classList.remove("active");
+      }
+      slides[slideIndex - 1].style.display = "block";
+      dots[slideIndex - 1].classList.add("active");
+      setTimeout(showSlides, 3000); // Change image every 3 seconds
+    }
 
-        function currentSlide(n) {
-            slideIndex = n - 1;
-            clearTimeout(auto); // Stop the automatic slideshow
-            showSlides(); // Call the function to display the current slide
-            auto = setTimeout(showSlides, 3000); // Restart the automatic slideshow
-        }
+    function currentSlide(n) {
+      slideIndex = n - 1;
+      clearTimeout(auto); // Stop the automatic slideshow
+      showSlides(); // Call the function to display the current slide
+      auto = setTimeout(showSlides, 3000); // Restart the automatic slideshow
+    }
 
-        let auto = setTimeout(showSlides, 0); // Call the function to start the slideshow
+    let auto = setTimeout(showSlides, 0); // Call the function to start the slideshow
   </script>
 </body>
 
